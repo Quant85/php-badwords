@@ -18,12 +18,8 @@ sostituire la badword passata in GET con tre *. -->
   Te ne sei andata via con la tua amica <br>
   Quella alta, grande fica...';
 
-<<<<<<< HEAD
-  $barword = $_GET["badword"];
-=======
  /*  $barword = $_GET["badword"]; */
   $barword = $_POST["word"];
->>>>>>> temp-branch
 ?>
 
 <!DOCTYPE html>
@@ -38,28 +34,21 @@ sostituire la badword passata in GET con tre *. -->
     <h1>Censuratore</h1>
     <h2>Il testo da censurare è lungo: <?php echo strlen( $txt);?> caratteri<br>punteggiatura compresa. 😊 </h2>
 
-<<<<<<< HEAD
-    <p>
-      <?php echo str_replace($barword, '*****', $txt);?>
-    </p>
-      <!--  http://localhost:8888/php-badwords/secondo/?badword=pelo  -->
-=======
-    <form action="" method="get">
+    <!-- <form action="" method="get">
       <input type="text" name="word" placeholder="Inserisci la parola da censurare">
       <input type="submit" value="Censura">    
-    </form>
+    </form> -->
     <!-- con il metodo get passo la querystring e lo mostra in url, mentre con la richiesta post non la mostro in url -->
       <!--  http://localhost:8888/php-badwords/secondo/?badword=pelo  -->
 
-    <!-- <form action="index.php" method="post">
+    <form action="index.php" method="post">
       <input type="text" name="badword" placeholder="Inserisci la parola da censurare">
       <input type="submit" value="Censura">    
-    </form> -->
+    </form>
 
     <p>
       <?php echo str_replace($barword, '*****', $txt);?>
     </p>
->>>>>>> temp-branch
   </main>
 </body>
 </html>
